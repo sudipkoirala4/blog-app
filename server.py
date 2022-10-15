@@ -1,17 +1,18 @@
-from fastapi import FastAPI
+from fastapi import FastAPI,path
+
 app = FastAPI()
 @app.get("/get_blogs")
 def get_blogs():
-   return {"data":{"get blogs":"  "}}
+   return {"input":{"get blogs":"  "}}
 @app.get("/get_blogs/{blog_id}")
 def get_blogs():
-   return {"data":{"blog id":" "}}
+   return {"input":{"blog id":" "}}
 @app.post("/create_blog")
 def create_blogs():
-   return {"data":{"post blog":" "}}
+   return {"process":{"post blog":" "}}
 @app.post("/delete")
 def delete_blog():
-   return {"data":{"delete blog":"  "}}
+   return {"remove":{"delete blog":"  "}}
 @app.post("/update")
 def update_blog():
-    return {"data":{"update blog":" "}}
+    return {"change":{"update blog":" "}}
